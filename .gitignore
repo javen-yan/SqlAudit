@@ -1,0 +1,9 @@
+settings.py
+logs/
+*pycache__
+*.pyc
+*.zip
+*.jpg
+test/
+README.md
+media/rbsql/
