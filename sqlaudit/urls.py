@@ -28,6 +28,7 @@ urlpatterns = [
     path('sqlorders/', include('sqlorders.urls')),
     path('sqlquery/', include('sqlquery.urls')),
     path('webshell/', include('webshell.urls')),
+    path('settings/', include('externd.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
