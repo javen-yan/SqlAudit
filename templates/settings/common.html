@@ -8,23 +8,206 @@
 {% endblock %}
 
 {% block right_content %}
-    <div class="row">
-        <div class="col-md-12">
-            <div class="box box-default">
-                <div class="box-header box-border">
-                    <div class="mailbox-read-info">
-                        <h3 class="box-title"><i class="fa fa-cog"></i> 通用设置
-                            <small class="text-muted"><cite>设置一些全局通用设置</cite></small>
-                        </h3>
+    <div class="row clearfix">
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    选择操作
+                </div>
+                <div class="panel-body">
+                    <div id="div-config" class="form-group">
+                        <h5 class="control-label text-bold">配置项：</h5>
+                        <div class="form-group">
+                            <select id="config" name="confg"
+                                    class="selectpicker show-tick form-control bs-select-hidden"
+                                    data-name="配置项" data-placeholder="请选择配置项:" required>
+                                <option value="is-empty" disabled="">请选择配置项:</option>
+                                <option value="0" selected="selected">系统设置</option>
+                                <option value="1" >新增配置</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 column">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    操作
+                </div>
+                <div class="panel-body">
+                    <div id="div-system-config" class="form-group" style="display: none">
+                        <h4 style="color: darkgrey"><b>功能模块配置</b></h4>
+                        <hr/>
+                        {% for config in configs %}
+                           <h5 style="color: darkgrey"><b>{{ config.name }}</b></h5>
+                            <hr/>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="{{ config.key }}"
+                                           class="col-sm-4 control-label">{{ config.key.upper }}</label>
+                                    <div class="col-sm-8">
+                                        <div class="switch switch-small">
+                                            <label>
+                                                <input id="{{ config.key }}"
+                                                       key="{{ config.key }}"
+                                                       value="{{ config.is_enabled }}"
+                                                       type="checkbox">
+                                                是否开启 {{ config.name }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-10">
+                                <button id="saveconfig" type="button" class="btn btn-default">保存配置</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="add_config" style="display: none">
+                       <div class="form-horizontal">
+                           <div class="form-group">
+                                <label for="config_key"
+                                       class="col-sm-2 control-label">配置名称</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="name" id="add_config_name" class="form-control" placeholder="请输入配置名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="config_key"
+                                       class="col-sm-2 control-label">配置KEY</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="key" id="add_config_key" class="form-control" placeholder="请输入配置关键字 如: is_open">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="config_key"
+                                       class="col-sm-2 control-label">配置规则</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="value" id="add_config_value"  class="form-control" placeholder="请输入配置规则">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="add_config_switch"
+                                           class="col-sm-2 control-label">是否开启配置</label>
+                                    <div class="col-sm-8">
+                                        <div class="switch switch-small">
+                                            <label>
+                                                <input id="add_config_switch"
+                                                       name="is_enabled"
+                                                       type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                            </div>
+                           {% csrf_token %}
+                            <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-10">
+                                <button  type="button" id="addconfig-btn" class="btn btn-default">增加配置</button>
+                            </div>
+                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 {% endblock %}
 
 {% block link_javascripts %}
     <script>
+        $(function () {
+           if ($("#config").val() === '0') {
+                $("#div-system-config").show();
+                $("#add_config").hide();
+                $('input[type="checkbox"]').each(function (i) {
+                    if ($(this).val() === '0' || $(this).val() === 0) {
+                        $(this).bootstrapSwitch('state', true);
+                    }
+                    else {
+                        $(this).bootstrapSwitch('state', false);
+                    }
+                });
+            }
+            else if ($("#config").val() === '1') {
+                $("#div-system-config").hide();
+                $("#add_config").show();
+                $('input[type="checkbox"]').each(function (i) {
+                    if ($(this).val() === '0' || $(this).val() === 0) {
+                        $(this).bootstrapSwitch('state', true);
+                    }
+                    else {
+                        $(this).bootstrapSwitch('state', false);
+                    }
+                });
+            }
+        });
+
+        $("#config").change(function () {
+            if ($("#config").val() === '0') {
+                $("#div-system-config").show();
+                $("#add_config").hide();
+                $('input[type="checkbox"]').each(function (i) {
+                    if ($(this).val() === '0' || $(this).val() === 0) {
+                        $(this).bootstrapSwitch('state', true);
+                    }
+                    else {
+                        $(this).bootstrapSwitch('state', false);
+                    }
+                });
+            }
+            else if ($("#config").val() === '1') {
+                $("#div-system-config").hide();
+                $("#add_config").show();
+            }
+        });
+
+        $("#addconfig-btn").click(function () {
+            var data = {
+                "name": $("#add_config_name").val(),
+                "key": $("#add_config_key").val(),
+                "value": $("#add_config_value").val(),
+                "is_enabled": $("#add_config_switch").val() === "true" ? "0":"1"
+            };
+            $.ajax({
+                type: "post",
+                url: "{% url 'p_add_config' %}",
+                dataType: "json",
+                data: {
+                    configs: JSON.stringify(data),
+                     csrfmiddlewaretoken:$('[name="csrfmiddlewaretoken"]').val()
+                },
+                complete: function () {
+                },
+                success: function (data) {
+                    if (data.status === 0) {
+                        window.location.reload()
+                    } else {
+                        alert(data.msg);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        });
+
+        // 系统设置checkbox事件
+        $('input[type="checkbox"]').on('switchChange.bootstrapSwitch', function (event, state) {
+            if (state) {
+                $(this).val(true);
+            }
+            else {
+                $(this).val(false);
+            }
+        });
+
+
 
     </script>
 {% endblock %}

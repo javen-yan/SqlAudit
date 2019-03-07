@@ -63,6 +63,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{% static 'AdminLTE-2.4.5/bower_components/jquery-loading/jquery.loading.min.css' %}">
     <!-- xterm -->
     <link rel="stylesheet" href="{% static 'AdminLTE-2.4.5/bower_components/xterm/css/xterm.min.css' %}">
+    <link rel="stylesheet" href="{% static 'switch/css/bootstrap-switch.min.css' %}">
 
 
     <style>
@@ -246,7 +247,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{% url 'p_common_set' %}"><i class="fa fa-circle-o"></i>通用设置</a></li>
-                        <li><a href="{% url 'p_hot_set' %}"><i class="fa fa-circle-o"></i>高级设置</a></li>
                     </ul>
                 </li>
             </ul>
@@ -374,6 +374,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{% static 'AdminLTE-2.4.5/bower_components/showdownjs/showdown.min.js' %}"></script>
 <!-- public js file -->
 <script src="{% static 'public.js' %}"></script>
+<script src="{% static 'switch/js/bootstrap-switch.min.js' %}"></script>
 
 <!-- 定义 javascript block -->
 {% block link_javascripts %}
