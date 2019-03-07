@@ -57,7 +57,7 @@ class ParamikoConn(object):
         """初始化连接"""
         conn = paramiko.Transport('127.0.0.1', 22)
         conn.start_client()
-        conn.auth_password(username='root', password='127521')
+        conn.auth_password(username='webshell', password='oWd5CRnELlg1ZBi9')
         PARAMIKO_CONN['conn'] = conn
 
     def create_session(self):
