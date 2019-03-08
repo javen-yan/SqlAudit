@@ -1,9 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.urls import path
 
-from externd.views import CommonSetting, SysSettings
+from externd.views import CommonSetting
 
 urlpatterns = [
-    path(r'common_set/', login_required(CommonSetting.as_view()), name='p_common_set'),
-    path(r'add_config/', login_required(SysSettings.as_view()), name='p_add_config'),
+    path(r'common_set/', login_required(CommonSetting.as_view()), name='p_common_set')
 ]

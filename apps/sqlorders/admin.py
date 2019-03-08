@@ -50,10 +50,9 @@ class MysqlConfigAdmin(admin.ModelAdmin):
 
 
 class SysConfigAdmin(admin.ModelAdmin):
-    list_display = ('name', 'value', 'is_enabled')
-    list_display_links = ('name',)
-    readonly_fields = ('key', 'name')
-    fields = ('name', 'value', 'is_enabled')
+    list_display = ('key', 'name', 'value', 'is_enabled')
+    list_display_links = ('name', 'key')
+    fields = ('key', 'name', 'value', 'is_enabled')
 
 
 class SqlOrdersEnvironmentAdmin(admin.ModelAdmin):
