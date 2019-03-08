@@ -6,13 +6,12 @@ import simplejson as json
 from common.config import SysConfig
 from sql.models import SqlWorkflow
 
-from . import EngineBase
 from .models import ResultSet
 
 logger = logging.getLogger('default')
 
 
-class InceptionEngine(EngineBase):
+class InceptionEngine(object):
     def get_connection(self, db_name=None):
         archer_config = SysConfig()
         inception_host = archer_config.get('inception_host')

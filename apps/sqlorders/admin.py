@@ -65,6 +65,7 @@ class MysqlSchemasAdmin(admin.ModelAdmin):
     list_display = ('host', 'port', 'user', 'envi', 'character', 'is_type', 'comment', 'updated_at')
     ordering = ('-created_at',)
     list_display_links = ('host',)
+    readonly_fields = ('host', 'port', 'user', 'envi', 'character', 'is_type', 'comment', 'updated_at')
 
 
 admin.site.unregister(TaskResult)
@@ -73,4 +74,3 @@ admin.site.register(MysqlConfig, MysqlConfigAdmin)
 admin.site.register(SysConfig, SysConfigAdmin)
 admin.site.register(SqlOrdersContents, SqlOrdersContentsAdmin)
 admin.site.register(SqlOrdersExecTasks, SqlOrdersExecTasksAdmin)
-admin.site.register(MysqlSchemas, MysqlSchemasAdmin)
