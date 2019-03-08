@@ -3,6 +3,7 @@
 import logging
 
 from celery import shared_task
+import json
 
 from sqlaudit.settings import DATABASES
 from sqlorders.models import MysqlConfig
@@ -30,6 +31,7 @@ def sync_remote_schemameta_to_local():
             'envi_id': row.envi_id,
             'comment': row.comment
         })
+    print("****************"+json.dumps(remote_host)+"****************")
     aa = MysqlQueryRemoteMetaOp(remote_host)
     aa.run()
 

@@ -54,7 +54,6 @@ def sync_schemas():
         })
 
     for row in collect_from_host:
-        print("****************"+json.dumps(row))
         try:
             cnx = pymysql.connect(user=row['user'],
                                   password=row['password'],

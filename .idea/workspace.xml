@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3efae5c8-3fe0-4d2b-b230-4b68c5e31337" name="Default Changelist" comment="fix passwd">
       <change beforePath="$PROJECT_DIR$/apps/sqlorders/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/sqlorders/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/sqlquery/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/sqlquery/tasks.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,18 +31,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/externd/engines/inception.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1658">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-              <folding>
-                <element signature="e#24#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/sqlquery/soar/urls.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -65,11 +54,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/sqlorders/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+            <state relative-caret-position="515">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/sqlquery/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1496">
+              <caret line="194" column="53" selection-start-line="194" selection-start-column="46" selection-end-line="194" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/sqlquery/tasks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-560">
+              <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -128,7 +135,6 @@
       <find>GetGrantSchemaView</find>
       <find>GetGrantSchemaForm</find>
       <find>MysqlRulesChain</find>
-      <find>MysqlQueryRemoteMetaOp</find>
       <find>ExecuteExportTasksForm</find>
       <find>EmailMessage</find>
       <find>InceptionEngine</find>
@@ -138,10 +144,13 @@
       <find>query_print</find>
       <find>MySQLQuery</find>
       <find>MysqlSchemas</find>
+      <find>新建本地</find>
+      <find>MysqlQueryRemoteMetaOp</find>
     </findStrings>
     <dirStrings>
       <dir>E:\inspur_projects\dbaudits\apps</dir>
       <dir>E:\inspur_projects\dbaudits\apps\sqlorders</dir>
+      <dir>E:\inspur_projects\dbaudits</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -174,6 +183,8 @@
         <option value="$PROJECT_DIR$/apps/sqlorders/admin.py" />
         <option value="$PROJECT_DIR$/apps/sqlorders/models.py" />
         <option value="$PROJECT_DIR$/apps/sqlorders/tasks.py" />
+        <option value="$PROJECT_DIR$/apps/sqlquery/utils.py" />
+        <option value="$PROJECT_DIR$/apps/sqlquery/tasks.py" />
       </list>
     </option>
   </component>
@@ -195,17 +206,6 @@
             <path>
               <item name="dbaudits" type="b2602c69:ProjectViewProjectNode" />
               <item name="dbaudits" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dbaudits" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dbaudits" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dbaudits" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dbaudits" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="sqlorders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,7 +284,7 @@
       <workItem from="1551854037518" duration="4886000" />
       <workItem from="1551863401617" duration="3306000" />
       <workItem from="1551921260661" duration="18381000" />
-      <workItem from="1552004100718" duration="17881000" />
+      <workItem from="1552004100718" duration="18744000" />
     </task>
     <task id="LOCAL-00001" summary="fix passwd">
       <created>1551930165481</created>
@@ -297,7 +297,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62017000" />
+    <option name="totallyTimeSpent" value="62880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -369,11 +369,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix passwd" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1512" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/webshell/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
@@ -541,11 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/sqlquery/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8904" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sqlorders/sql_ddl_orders.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -691,10 +681,24 @@
         <state relative-caret-position="-252" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/sqlquery/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1496">
+          <caret line="194" column="53" selection-start-line="194" selection-start-column="46" selection-end-line="194" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/sqlorders/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+        <state relative-caret-position="515">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/sqlquery/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-560">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
         </state>
       </provider>
     </entry>
