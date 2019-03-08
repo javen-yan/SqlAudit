@@ -237,6 +237,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <li><a href="{% url 'p_web_ssh' %}"><i class="fa fa-circle-o"></i>webshell</a></li>
                     </ul>
                 </li>
+                {% if request.user.user_role  == "DBA" %}
                 <li class="treeview">
                     <a>
                         <i class="fa fa-cog"></i>
@@ -249,6 +250,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <li><a href="{% url 'p_common_set' %}"><i class="fa fa-circle-o"></i>通用设置</a></li>
                     </ul>
                 </li>
+                {% endif %}
             </ul>
             <!-- /.sidebar-menu -->
         </section>
