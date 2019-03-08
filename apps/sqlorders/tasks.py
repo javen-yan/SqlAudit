@@ -8,6 +8,7 @@ status = 2: 推送inception processlist
 """
 
 import ast
+import json
 import logging
 import os
 import time
@@ -53,6 +54,7 @@ def sync_schemas():
         })
 
     for row in collect_from_host:
+        print("****************"+json.dumps(row))
         try:
             cnx = pymysql.connect(user=row['user'],
                                   password=row['password'],
