@@ -77,7 +77,7 @@ class MysqlSchemas(models.Model):
     updated_at = models.DateTimeField(auto_now=True, verbose_name=u'更新时间')
 
     class Meta:
-        verbose_name = u'MySQL集群汇总库'
+        verbose_name = u'MySQL集群汇总库 自动生成 无需配置'
         verbose_name_plural = verbose_name
 
         default_permissions = ()

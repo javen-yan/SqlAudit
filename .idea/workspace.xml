@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3efae5c8-3fe0-4d2b-b230-4b68c5e31337" name="Default Changelist" comment="fix passwd">
-      <change beforePath="$PROJECT_DIR$/apps/sqlorders/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/sqlorders/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/sqlorders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/sqlorders/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,18 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/externd/data_masking.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2240">
-              <caret line="80" column="53" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="53" />
-              <folding>
-                <element signature="e#23#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/externd/engines/inception.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,14 +97,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/sqlorders/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="76" column="52" lean-forward="true" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
+            <state relative-caret-position="632">
+              <caret line="76" column="32" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="32" />
               <folding>
                 <element signature="e#44#76#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/sqlorders/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -181,6 +178,7 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/apps/sqlquery/forms.py" />
         <option value="$PROJECT_DIR$/apps/sqlorders/admin.py" />
+        <option value="$PROJECT_DIR$/apps/sqlorders/models.py" />
       </list>
     </option>
   </component>
@@ -297,7 +295,7 @@
       <workItem from="1551854037518" duration="4886000" />
       <workItem from="1551863401617" duration="3306000" />
       <workItem from="1551921260661" duration="18381000" />
-      <workItem from="1552004100718" duration="15689000" />
+      <workItem from="1552004100718" duration="15839000" />
     </task>
     <task id="LOCAL-00001" summary="fix passwd">
       <created>1551930165481</created>
@@ -310,7 +308,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59825000" />
+    <option name="totallyTimeSpent" value="59975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -477,13 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/sqlorders/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="212" column="14" selection-start-line="212" selection-start-column="4" selection-end-line="212" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -697,11 +688,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/sqlorders/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="76" column="52" lean-forward="true" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
+        <state relative-caret-position="632">
+          <caret line="76" column="32" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="32" />
           <folding>
             <element signature="e#44#76#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/sqlorders/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
         </state>
       </provider>
     </entry>
