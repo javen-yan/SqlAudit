@@ -63,6 +63,6 @@ sqlparse==0.2.4
 tenacity==5.0.2
 Twisted==18.7.0
 txaio==18.8.1
-urllib3==1.23
+urllib3==1.26.5
 vine==1.1.4
 zope.interface==4.5.0
